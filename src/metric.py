@@ -40,19 +40,19 @@ class PredictionMetrics:
             self.multi_label_flag = 0
         
         if self.multi_label_flag:
-            with open(r'F:\kg-datasets\KG_data\FB15k-237-q2b\train-answers.pkl', 'rb') as f:
+            with open(r'F:\kg-datasets\KG_data\drugbank\train-answers.pkl', 'rb') as f:
                 train_answers = pickle.load(f)
                 train_answers_dict = train_answers
-            with open(r'F:\kg-datasets\KG_data\FB15k-237-q2b\test-easy-answers.pkl', 'rb') as f:
+            with open(r'F:\kg-datasets\KG_data\drugbank\test-easy-answers.pkl', 'rb') as f:
                 test_easy_answers = pickle.load(f)
-            with open(r'F:\kg-datasets\KG_data\FB15k-237-q2b\test-hard-answers.pkl', 'rb') as f:
+            with open(r'F:\kg-datasets\KG_data\drugbank\test-hard-answers.pkl', 'rb') as f:
                 test_hard_answers = pickle.load(f)
 
             import ast
-            with open(r'F:\kg-datasets\KG_data\FB15k-237-q2b\effect_reverse_dict.txt', 'r') as f:
+            with open(r'F:\kg-datasets\KG_data\drugbank\effect_reverse_dict.txt', 'r') as f:
                 a = f.readlines()
                 conc_dict = ast.literal_eval(a[0])
-            with open(r'F:\kg-datasets\KG_data\FB15k-237-q2b\effect_dict.txt', 'r') as f:
+            with open(r'F:\kg-datasets\KG_data\drugbank\effect_dict.txt', 'r') as f:
                 effect = f.readlines()
                 effect_dict = ast.literal_eval(effect[0])
                 num_effect = len(effect_dict)

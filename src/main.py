@@ -1,7 +1,7 @@
 import torch
 
 '''
-    python main.py -c configs/fb15k-237.json pretrain1
+    python main.py -c configs/FOLO.json pretrain1
 '''
 
 def put_default_config(config):
@@ -15,7 +15,7 @@ def put_default_config(config):
     set_default('seed', 100)
     # set_default('root_dir', '/root/kg-datasets/KG_data') linux
     set_default('root_dir', 'F:/kg-datasets/KG_data')
-    set_default('data_dir', f'{config["root_dir"]}/FB15k-237-q2b')
+    set_default('data_dir', f'{config["root_dir"]}/FOLO-q2b')
 
     # 训练参数
     set_default('num_epoch', 2)
@@ -77,8 +77,8 @@ def put_default_config(config):
     return config
 
 def run_reasoning(config):
-    from tasks.pretrain import FB15K237
-    pretrain_task = FB15K237(config)
+    from tasks.pretrain import FOLO
+    pretrain_task = FOLO(config)
     from tasks.reasoning import reasoning
     downstream_task = reasoning(
         pretrain_task.betae,
@@ -95,7 +95,7 @@ def run_reasoning(config):
         for i in range(1, 10000000):
             from pathlib import Path
             task_name = f'{config["upstream_task_name"]}{i}'
-            load_path = Path('pretrained_model/FB15k237_camera_pretrain2.pt')
+            load_path = Path('pretrained_model/FOLO_camera_pretrain2.pt')
             if not load_path.exists():
                 break
             from train import ft_test
@@ -141,9 +141,9 @@ def run_reasoning(config):
         run_test_reasoning(config)
 
 def run_test_reasoning(config):
-    from tasks.pretrain import FB15K237
+    from tasks.pretrain import FOLO
     from tasks.reasoning import reasoning
-    pretrain_task = FB15K237(config)
+    pretrain_task = FOLO(config)
     test_modes = config['reasoning_test_modes']
 
     from train import ft_test
@@ -192,7 +192,7 @@ def run_test_reasoning(config):
 def get_argparser():
     import argparse
     parser = argparse.ArgumentParser(prog='python main.py', description='KGTransformer')    
-    parser.add_argument('-c', '--config', default='configs/fb15k-237.json', nargs=1, type=argparse.FileType('r'), help='path to the config file')
+    parser.add_argument('-c', '--config', default='configs/drugbank.json', nargs=1, type=argparse.FileType('r'), help='path to the config file')
 
     return parser
 
@@ -269,6 +269,6 @@ def main():
     else:
         assert False, f'Task {t} is not runnable.'
 
-# python main.py -c configs/fb15k-237.json pretrain1
+# python main.py -c configs/FOLO.json pretrain1
 if __name__ == '__main__':
     main()
