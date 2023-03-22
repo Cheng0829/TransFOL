@@ -1,0 +1,3 @@
+numentity: 14429
+numrelations: 7
+numtypes: 1
