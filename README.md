@@ -1,4 +1,4 @@
-# FOLO
+# TransFOL
 A first-order logical query model for DDI prediction based on Cross-Transformer and GCN
 
 ![1](figure/3.png)
