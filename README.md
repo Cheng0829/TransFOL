@@ -133,7 +133,7 @@ Please note that the Nvidia graphics card for Abe architecture has a minimum sup
 
 **Junkai Cheng** @github.com/Cheng0829 \
 **Email:** chengjunkai829@gmail.com & Cheng0829@dlmu.edu.cn \
-**Site:** [CSDN](https://blog.csdn.net/Louise_Trender?type=blog) & [GitHub](https://github.com/Cheng0829)
+**Site:** [GitHub](https://github.com/Cheng0829)
 
 **Yijia Zhang** @github.com/ItrecTextming \
 **Email:** zhangyijia@dlmu.edu.cn \
