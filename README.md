@@ -52,7 +52,7 @@ $folo testing_2i
 ```
 
 ## Documentation
-
+```
 src
   │  data_util.py
   │  deter_util.py
@@ -77,7 +77,7 @@ src
           real_query.py
           reasoning.py
           __init__.py
-
+```
 ### Model
 
 The basic structure of our model an be found in `model.py`.
