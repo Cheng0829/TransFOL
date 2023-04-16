@@ -27,8 +27,8 @@ We provide the dataset in the [data](data/) folder.
 | --- | --- | --- |
 | [Drugbank](data/drugbank/)| [This link](https://bitbucket.org/kaistsystemsbiology/deepddi/src/master/data/) | A drug-drug interaction network betweeen 1,709 drugs with 136,351 interactions. |
 | [TWOSIDES](data/TWOSIDES/) | [This link](http://snap.stanford.edu/biodata/datasets/10017/10017-ChChSe-Decagon.html) | A drug-drug interaction network betweeen 645 drugs with 46221 interactions. |
-| [DrugCombDB](data/DrugCombDB) | [This link](http://drugcombdb.denglab.org/) | .|
-| [Phenomebrowser](data/Phenomebrowser) | [This link](http://www.phenomebrowser.net/#/) | . |
+| [DrugCombDB](data/DrugCombDB) | [This link](http://drugcombdb.denglab.org/) | A drug-drug interaction network includeing dose information.|
+| [Phenomebrowser](data/Phenomebrowser) | [This link](http://www.phenomebrowser.net/#/) | A large-scale heterogeneous biomedical knowledge graph.|
 
 ## Reproduction
 
@@ -46,9 +46,9 @@ at [Google Drive]().
 To reproduce all results for `drugbank`:
 
 ```bash
-folo="python main.py -c configs/drugbank.json"
-$folo training_2i 
-$folo testing_2i
+transfol="python main.py -c configs/drugbank.json"
+$transfol training_2i 
+$transfol testing_2i
 ```
 
 ## Documentation
@@ -73,7 +73,7 @@ src
   └─tasks
           base.py
           betae.py
-          folo_pretrain.py
+          transfol_pretrain.py
           real_query.py
           reasoning.py
           __init__.py
