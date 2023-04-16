@@ -1,14 +1,13 @@
 # TransFOL
-A first-order logical query model for DDI prediction based on Cross-Transformer and GCN
 
-![1](figure/3.png)
+![ ](figure/3.png)
 
-This is the code for our paper `XXX`
+**This is the data and code for our paper** `TransFOL: A Logical Query Model Based on Cross-Transformer for Drug–Drug Interaction Prediction`.
 
 ## Prerequisites
 
 * `cuda version < 11.0`
-* `torch>=1.7.1 & <=1.9`
+* `pytorch>=1.7.1 & <=1.9`
   * Note: Pytorch version greater than 1.9 has OOM bugs. See <https://github.com/pytorch/pytorch/issues/67680>.
 * `torch-geometric`
 
@@ -16,23 +15,23 @@ Example installation using [`conda`](https://conda.io):
 
 ```bash
 # Use the cuda version that matches your nvidia driver and pytorch
-conda install "pytorch=1.8.1,<=1.9" cudatoolkit=10.1 pyg -c pyg -c pytorch -y
+conda install pytorch=1.8.1 cudatoolkit=10.1 pyg -c pyg -c pytorch -y
 ```
 
-## Dataset
+## Datastes
 
 We provide the dataset in the [data](data/) folder.
 
 | Data | Source | Description |
 | --- | --- | --- |
 | [Drugbank](data/drugbank/)| [This link](https://bitbucket.org/kaistsystemsbiology/deepddi/src/master/data/) | A drug-drug interaction network betweeen 1,709 drugs with 136,351 interactions. |
-| [TWOSIDES](data/TWOSIDES/) | [This link](http://snap.stanford.edu/biodata/datasets/10017/10017-ChChSe-Decagon.html) | A drug-drug interaction network betweeen 645 drugs with 46221 interactions. |
-| [DrugCombDB](data/DrugCombDB) | [This link](http://drugcombdb.denglab.org/) | A drug-drug interaction network includeing dose information.|
-| [Phenomebrowser](data/Phenomebrowser) | [This link](http://www.phenomebrowser.net/#/) | A large-scale heterogeneous biomedical knowledge graph.|
+| [TWOSIDES](data/TWOSIDES/) | [This link](http://snap.stanford.edu/biodata/datasets/10017/10017-ChChSe-Decagon.html) | A drug-drug interaction network betweeen 645 drugs with 46,221 interactions. |
+| [DrugCombDB](data/DrugCombDB) | [This link](http://drugcombdb.denglab.org/) | An integrated biomedical network contains more than 4 million drugs and other entities. We extract a subgraph dataset containing the relationship "*drug-dose-target-response*" from it.|
+| [Phenomebrowser](data/Phenomebrowser) | [This link](http://www.phenomebrowser.net/#/) | An integrated biomedical network include  61,146 medical entities and 1,246,726 medical entity pairs.  We extract sub-datasets that contain the "*mammal symptom-human symptom-drug-disease*" relationship from it. |
 
 ## Reproduction
 
-The parameters in the paper is preloaded in [`configs/`](configs/).
+The parameters in the paper is preloaded in [`./src/configs/`](src/configs/).
 Change `root_dir` option for the location to save model checkpoints.
 
 The location for the extracted dataset
@@ -41,17 +40,18 @@ For exmpale, if the `drugbank` dataset is in `/data/drugbank`,
 this is what the `data_dir` options should be set.
 
 Alternatively, pretrained models are available
-at [Google Drive]().
+at [Google Drive](https://drive.google.com/drive/folders/1FI4TqRI_bXUSNMAuf0F2qUCmUQGjtn_j).
 
 To reproduce all results for `drugbank`:
 
 ```bash
 transfol="python main.py -c configs/drugbank.json"
-$transfol training_2i 
-$transfol testing_2i
+$ transfol training_2i 
+$ transfol testing_2i
 ```
 
 ## Documentation
+
 ```
 src
   │  data_util.py
@@ -78,6 +78,7 @@ src
           reasoning.py
           __init__.py
 ```
+
 ### Model
 
 The basic structure of our model an be found in `model.py`.
@@ -85,7 +86,7 @@ The model can be divided into 4 parts, triplet transform, enhancement module, Cr
 
 ### Training
 
-Training-related utilities can be found in [`train.py`](./train.py).
+Training-related utilities can be found in [`train.py`](./src/train.py).
 They accept `Iterator`'s that yield batched data,
 identical to the output of a `torch.utils.data.DataLoader`.
 The most useful functions are `main_mp()` and `ft_test()`.
@@ -104,7 +105,7 @@ python main.py <task_name> [<task_name>...]
 
 In a specific task, `base` option specifies the task it should inherit from.
 `type` option specifies the type of operation of this configuration.
-See [`main.py`](./main.py) for a full list of available options.
+See [`./src/main.py`](./src/main.py) for a full list of available options.
 
 ## Troubleshooting
 
@@ -128,6 +129,17 @@ Please note that the Nvidia graphics card for Abe architecture has a minimum sup
 
 </details>
 
+## Authors
+
+**Junkai Cheng** @github.com/Cheng0829 \
+**Email:** chengjunkai829@gmail.com & Cheng0829@dlmu.edu.cn \
+**Site:** [CSDN](https://blog.csdn.net/Louise_Trender?type=blog) & [GitHub](https://github.com/Cheng0829)
+
+**Yijia Zhang** @github.com/ItrecTextming \
+**Email:** zhangyijia@dlmu.edu.cn \
+**Site:** [GitHub](https://github.com/ItrecTextming)
+
 ## Acknowledgement
 
 We refer to the code of [kgTransformer](https://github.com/THUDM/kgTransformer). Thanks for their contributions.
+
