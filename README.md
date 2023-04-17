@@ -1,6 +1,6 @@
 # TransFOL
 
-![ ](figure/3.png)
+![ ](figure/3-2.png)
 
 **This is the data and code for our paper** `TransFOL: A Logical Query Model Based on Cross-Transformer for Drug–Drug Interaction Prediction`.
 
