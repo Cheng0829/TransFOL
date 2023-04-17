@@ -1,12 +1,12 @@
 # TransFOL
 
+
 ![ ](figure/3-2.png)
 
 **This is the data and code for our paper** `TransFOL: A Logical Query Model Based on Cross-Transformer for Drug–Drug Interaction Prediction`.
 
 ## Prerequisites
 
-* `cuda version < 11.0`
 * `pytorch>=1.7.1 & <=1.9`
   * Note: Pytorch version greater than 1.9 has OOM bugs. See <https://github.com/pytorch/pytorch/issues/67680>.
 * `torch-geometric`
@@ -124,8 +124,7 @@ See <https://github.com/pytorch/pytorch/issues/67680> for more information.
 
 <summary>torch-geometric installation is failed</summary>
 
-Please try downgrading the cuda version. Due to library dependency, torch_cluster, torch_scatter, torch_sparse and torch_spline_conv are required to install torch-geometric installations, while cuda must be less than 11.0 due to the limitations of torch versions.
-Please note that the Nvidia graphics card for Abe architecture has a minimum support version 11.0, so installation is not supported.
+Please try downgrading the cuda version. Due to library dependency, torch_cluster, torch_scatter, torch_sparse and torch_spline_conv are required to install torch-geometric installations.
 
 </details>
 
