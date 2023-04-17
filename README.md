@@ -15,7 +15,7 @@ Example installation using [`conda`](https://conda.io):
 
 ```bash
 # Use the cuda version that matches your nvidia driver and pytorch
-conda install pytorch=1.8.1 cudatoolkit=10.1 pyg -c pyg -c pytorch -y
+conda install pytorch=1.7.1 cudatoolkit=10.1 pyg -c pyg -c pytorch -y
 ```
 
 ## Datastes
