@@ -1,3 +1,0 @@
-numentity: 285
-numrelations: 242
-numtypes: 1
