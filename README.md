@@ -63,18 +63,15 @@ src
   │  sampler.py
   │  train.py
   ├─configs
-    │      drugbank.json
-    │      DrugCombDB.json
-    │      Phenomebrowser.json
-    │      TWOSIDES.json
+        │  configs.json
   ├─pretrained_model
   └─tasks
-          base.py
-          betae.py
-          pretrain.py
-          real_query.py
-          reasoning.py
-          __init__.py
+        │  base.py
+        │  betae.py
+        │  pretrain.py
+        │  real_query.py
+        │  reasoning.py
+        │  __init__.py
 ```
 
 ### Model
