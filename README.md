@@ -62,13 +62,11 @@ src
   │  model.py
   │  sampler.py
   │  train.py
-  │
   ├─configs
     │      drugbank.json
     │      DrugCombDB.json
     │      Phenomebrowser.json
     │      TWOSIDES.json
-    │
   ├─pretrained_model
   └─tasks
           base.py
