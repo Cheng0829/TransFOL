@@ -3,7 +3,10 @@
 
 ![ ](figure/3-2.png)
 
-**This is the data and code for our paper** `TransFOL: A Logical Query Model Based on Cross-Transformer for Drug–Drug Interaction Prediction`.
+**This is the data and code for our paper** [`TransFOL: A Logical Query Model Based on Cross-Transformer for Drug–Drug Interaction Prediction`](https://pubmed.ncbi.nlm.nih.gov/38743532/).
+
+---
+**(2024.5.18) We found that there are some bugs in the uploaded python files that will cause training failures and parameter errors to be transmitted to the CPU. We have fixed them. If you find any problems or have any needs, please contact the email `chengjunkai829@gmail.com`.**
 
 ## Prerequisites
 
@@ -132,6 +135,23 @@ Please try downgrading the cuda version. Due to library dependency, torch_cluste
 **Yijia Zhang** @github.com/ItrecTextming \
 **Email:** zhangyijia@dlmu.edu.cn \
 **Site:** [GitHub](https://github.com/ItrecTextming)
+
+## Citation
+
+If you find our work helpful, feel free to give us a cite.
+
+```
+@ARTICLE{10530338,
+  author={Cheng, Junkai and Zhang, Yijia and Zhang, Hengyi and Ji, Shaoxiong and Lu, Mingyu},
+  journal={IEEE Journal of Biomedical and Health Informatics}, 
+  title={TransFOL: A Logical Query Model for Complex Relational Reasoning in Drug-Drug Interaction}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-11},
+  keywords={Drugs;Task analysis;Cognition;Knowledge graphs;Predictive models;Biological system modeling;Diseases;Drug-drug interaction;Logical query;Transformer;Graph convolutional network;Knowledge graph},
+  doi={10.1109/JBHI.2024.3401035}}
+```
 
 ## Acknowledgement
 
