@@ -149,10 +149,10 @@ If you find our work helpful, feel free to give us a cite.
   journal={IEEE Journal of Biomedical and Health Informatics}, 
   title={TransFOL: A Logical Query Model for Complex Relational Reasoning in Drug-Drug Interaction}, 
   year={2024},
-  volume={},
-  number={},
-  pages={1-11},
-  keywords={Drugs;Task analysis;Cognition;Knowledge graphs;Predictive models;Biological system modeling;Diseases;Drug-drug interaction;Logical query;Transformer;Graph convolutional network;Knowledge graph},
+  volume={28},
+  number={8},
+  pages={4975-4985},
+  keywords={Drugs;Task analysis;Cognition;Knowledge graphs;Predictive models;Biological system modeling;Diseases;Drug-drug interaction;logical query;trans- former;graph convolutional network;knowledge graph},
   doi={10.1109/JBHI.2024.3401035}}
 ```
 
