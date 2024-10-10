@@ -9,7 +9,7 @@
 
 **(2024.5.18) We found that there are some bugs in the uploaded python files that will cause training failures and parameter errors to be transmitted to the CPU. We have fixed them. If you find any problems or have any needs, please contact the email `chengjunkai829@gmail.com`.**
 
-**(2024.10.10) We are trying to upgrade the pytorch version to 2.3.1`.**
+**(2024.10.10) We are trying to upgrade the pytorch version to 2.3.1.**
 
 ## Prerequisites
 
