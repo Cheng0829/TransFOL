@@ -20,8 +20,11 @@
 Example installation using [`conda`](https://conda.io):
 
 ```bash
-# Use the cuda version that matches your nvidia driver and pytorch
-conda install pytorch=1.7.1 cudatoolkit=10.1 pyg -c pyg -c pytorch -y
+conda create -n TransFOL python=3.8
+conda install cudatoolkit=10.2
+pip install torch==1.8.1+cu102 torchvision==0.9.1+cu102 -f https://download.pytorch.org/whl/torch_stable.html
+pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-1.8.1+cu102.html
+pip install torch-geometric==2.0.4
 ```
 
 ## Datastes
