@@ -132,15 +132,11 @@ Please try downgrading the cuda version. Due to library dependency, torch_cluste
 
 </details>
 
-## Authors
+## Author
 
 **Junkai Cheng** @github.com/Cheng0829 \
 **Email:** chengjunkai829@gmail.com & Cheng0829@dlmu.edu.cn \
 **Site:** [GitHub](https://github.com/Cheng0829)
-
-**Yijia Zhang** @github.com/ItrecTextming \
-**Email:** zhangyijia@dlmu.edu.cn \
-**Site:** [GitHub](https://github.com/ItrecTextming)
 
 ## Citation
 
